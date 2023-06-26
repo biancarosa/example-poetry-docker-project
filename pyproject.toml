@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "example-poetry-docker-project"
+version = "0.1.0"
+description = ""
+authors = ["Bianca Rosa <bianca@lumosidentity.com>"]
+readme = "README.md"
+packages = [{include = "example_poetry_docker_project"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "~1.12.0"
+spacy = "3.4.0"
+spacy-transformers = "1.1.8"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
