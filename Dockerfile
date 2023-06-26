@@ -30,9 +30,6 @@ RUN apt-get update && apt-get install --no-install-recommends -y \
     libgomp1
 RUN ldconfig
 RUN apt-get clean && apt-get autoclean && apt-get autoremove
-
-# we need to copy __init__.py so that lumos_ml is technically a module,
-# because we haven't copied over the actual code yet
 COPY poetry.lock pyproject.toml /
 
 RUN poetry --no-ansi install --without=dev --no-root && rm -rf $POETRY_CACHE_DIR
